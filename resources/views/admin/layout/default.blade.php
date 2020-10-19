@@ -12,7 +12,7 @@
             @include('admin.layout.sidebar')
         @endif
 
-        <main class="main">
+        <main class="c-main">
 
             <div class="container-fluid" id="app" :class="{'loading': loading}">
                 <div class="modals">
