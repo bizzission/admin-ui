@@ -18,12 +18,15 @@
 
 </head>
 
-<body class="app header-fixed sidebar-fixed sidebar-lg-show">
-    @yield('header')
+<body class="c-app">
+    @yield('sidebar')
+    <div class="c-wrapper">
+        @yield('header')
 
-    @yield('content')
+        @yield('content')
 
-    @yield('footer')
+        @yield('footer')
+    </div>
 
     @include('brackets/admin-ui::admin.partials.wysiwyg-svgs')
     @include('brackets/admin-ui::admin.partials.main-bottom-scripts')

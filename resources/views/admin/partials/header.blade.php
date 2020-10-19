@@ -1,13 +1,14 @@
-<header class="app-header navbar">
-    <button class="navbar-toggler sidebar-toggler d-lg-none" type="button" data-toggle="sidebar-show">
-        <span class="navbar-toggler-icon"></span>
+<header class="c-header c-header-light c-header-fixed">
+    <button class="c-header-toggler c-class-toggler d-lg-none mr-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+        <span class="c-header-toggler-icon"></span>
     </button>
-	@if(View::exists('admin.layout.logo'))
-        @include('admin.layout.logo')
-	@endif
-    <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-            <a role="button" class="dropdown-toggle nav-link">
+
+    <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+        <span class="c-header-toggler-icon"></span>
+    </button>
+    <ul class="c-header-nav mfs-auto">
+        <li class="c-header-nav-item dropdown">
+            <a role="button" class="dropdown-toggle c-header-nav-link">
                 <span>
                     @if(Auth::check() && Auth::user()->avatar_thumb_url)
                         <img src="{{ Auth::user()->avatar_thumb_url }}" class="avatar-photo">

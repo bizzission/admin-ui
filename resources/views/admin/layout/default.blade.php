@@ -4,13 +4,16 @@
     @include('brackets/admin-ui::admin.partials.header')
 @endsection
 
+@section('sidebar')
+    @if(View::exists('admin.layout.sidebar'))
+        @include('admin.layout.sidebar')
+    @endif
+@endsection
+
+
 @section('content')
 
-    <div class="app-body">
-
-        @if(View::exists('admin.layout.sidebar'))
-            @include('admin.layout.sidebar')
-        @endif
+    <div class="c-body">
 
         <main class="c-main">
 
